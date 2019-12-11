@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+
+body{
+	background:url("http://www.psddots.com/wp-content/uploads/2013/11/light_white_wrinkle_paper_texture.jpg");
+	}
+
+.txtNew{
+	text-align:center;
+	margin-top:5%;
+	}
+.font_0{
+	line-height: 1.5em;
+    font-size: 48px;
+    font-family: cursive;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+	}
+.font_1{
+    color: white;
+    font-size: 16px;
+    text-shadow: 2px 2px 1px #000;
+	}
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  padding:2%;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 37%;
+  font-size: 18px;
+  margin-left:1%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+img{
+    border-radius:100px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin-top:7%;
+}
+
+
+
+.image_container:hover .middle {
+  opacity: 1;
+}
+
+.text_0{
+  background-color: #70BED6;
+  color: white;
+  font-size: 13px;
+  padding: 13px 26px;
+
+}
+.inputss{
+    margin-left:5%;
+    width:70%;
+    padding:1.5%;
+}
+    </style>
+    <body>
+            <div class="txtNew">
+                    <h1 class="font_0">SILVER HOUSE</h1>
+                    <p class="font_1">EXCLUSIVE SILVER HAND MADE</p>
+            </div><br>
+            <hr style='width:65%'><br><br>
+            <div class="card">
+                    <div class="image_container">
+                            <a href=''>
+                            <img src="https://pbs.twimg.com/profile_images/716487122224439296/HWPluyjs.jpg" class="image" style='width:45%'>
+                                <div class="middle">
+                                    <div class="text_0">Upload Photo</div>
+                                </div>
+                            </a>
+                        </div>
+                    <h1>John Doe</h1>
+                   <i style="font-size:24px;float:left;margin-left:16%;" class="fa">&#xf007; <b>Account</b></i><br><br>
+                    <b><p style='margin-left:-45%;'>Username:</p></b>
+                   <input class='inputss' type='text' placeholder="JohnDoe"><br>
+                   <b><p style='margin-left:-45%;'>First Name:</p></b>
+                   <input class='inputss' type="text" placeholder="John"><br>
+                   <b><p style='margin-left:-45%;'>Last Name:</p></b>
+                   <input class='inputss' type="text" placeholder="Doe"><br>
+                   <b><p style='margin-left:-36%;'>E-mail Address:</p></b>
+                   <input class='inputss' type="email" placeholder="JohnDoe@hotmail.com"><br>
+                   <div style="margin: 24px 0;">
+                        
+                        <a href='index.html'><button>Log Out</button></a>
+                       <a href='#'><button style='background:blue'>Update Account</button></a>
+                     </div>
+                     <a href="#"><i class="fa fa-dribbble"></i></a> 
+                     <a href="#"><i class="fa fa-twitter"></i></a>  
+                     <a href="#"><i class="fa fa-linkedin"></i></a>  
+                     <a href="#"><i class="fa fa-facebook"></i></a>
+                  </div>         
+    </body>
+</html>
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset='utf-8'>
+		<meta name='viewport' content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<script src='jquery.zoom.js'></script>
+		<script>
+			$(document).ready(function(){
+				$('#ex1').zoom();
+			});
+		</script>
+  <style>
+  .badge-notify{
+		background:red;
+		position:relative;
+		top: -20px;
+		right: 10px;
+  }
+  .btn-danger{
+		width:100%;
+		padding:16px;
+	}
+	.container{
+		width:70%;
+	}
+
+	.zoom {
+		display:inline-block;
+		position: relative;
+		}
+	
+	.zoom:after {
+		content:'';
+		display:block; 
+		width:33px; 
+		height:33px; 
+		position:absolute; 
+		top:0;
+		right:0;
+		background:url(icon.png);
+			}
+
+	.zoom img {
+		display: block;
+		cursor: crosshair;
+			}
+
+	.zoom img::selection { 
+		background-color: transparent; 
+			}
+	body {
+		background: url(http://www.psddots.com/wp-content/uploads/2013/11/light_white_wrinkle_paper_texture.jpg);
+			}
+	.font_0 {
+		line-height: 1.5em;
+		font-size: 48px;
+		font-family: cursive;
+		text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+			}
+	.font_1 {
+		color: white;
+		font-size: 16px;
+		text-shadow: 2px 2px 1px #000;
+		margin: 0 0 10px;
+			}
+	.header{
+		margin-top:5%;
+		}
+	footer{
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 125px;
+		border-top: 1px solid black;
+		background: #21262f;
+		padding: 34px 0;
+		border-top-left-radius: 2%;
+		border-top-right-radius: 2%;
+	}
+
+	#lab_social_icon_footer a {
+	  color: white;
+
+	}
+
+	#lab_social_icon_footer .social:hover {
+	  transform: scale(1.1);
+	}
+
+	#lab_social_icon_footer .social {
+	  transform: scale(0.8);
+	  transition-duration: 0.5s;
+	}
+
+
+	#lab_social_icon_footer #social-fb:hover {
+	  color: #3B5998;
+	}
+
+
+	#lab_social_icon_footer #social-insta:hover {
+	  color: #d34836;
+	}
+
+	#lab_social_icon_footer #social-em:hover {
+	  color: #f39c12;
+	}
+		
+	
+  </style>
+</head>
+
+<body>
+ <div class="container">
+  <div class="header text-center">
+		<div class="txtNew">
+           <h1 class="font_0">SILVER HOUSE</h1>
+              <p class="font_1">EXCLUSIVE SILVER HAND MADE</p>
+         </div>
+  </div>
+  <div class="page-header">
+    <h1>Buy
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+    </h1>
+  </div>
+  <div class="row">
+	  <div class="col-xs-6 text-left">
+		 <a href="index.html">HOME / </a><a href="set1.html">SET / </a><p style="display:inline-block">BLACK JET</p>
+	  </div>
+	  <div class="col-xs-6 text-right">
+		  <a href="#" style="color:black"><i class="fa fa-angle-left"></i> Prev </a> |
+		  <a href="pic2Zoom.html">Next <i class="fa fa-angle-right"></i></a>
+	  </div>
+  </div>  
+  
+
+  <div class="row" style="margin-top:2%;">
+    <div class="col-md-7">
+	<span class='zoom' id='ex1'>
+      <img src="http://silverfallsjewelry.com/wp-content/uploads/2016/01/SilverfallsJewelry-2-1000x500.jpg" width="450px" height="350px">
+	</span>
+      
+      </div>
+
+    <div class="col-md-5">   
+      <h1 style="font-size: 51px; font-family: 'Lucida Bright', Georgia, serif;">Model 1</h1>
+	  <h4 style="color: grey; margin-top: 28px;">$30.99</h4>
+	  <h4 style="font-weight: bolder;     margin-top: 28px; margin-bottom: 4px;">Product info:</h4>
+	   <p style="font-family: Comic Sans MS;">I'm a product description. I’m a great place to include more information about your product. Buyers like to know what they’re getting before they purchase.</p>
+
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="1" data-name="Model 1" data-summary="summary 1" data-price="30.99" data-quantity="1" data-image="http://silverfallsjewelry.com/wp-content/uploads/2016/01/SilverfallsJewelry-2-1000x500.jpg">Add to Cart</button>
+    </div>
+  </div>
+ </div>
+                  <footer id="lab_social_icon_footer">
+					<div class="container">
+					<div class="col-md-6 col-xs-6" style="color:white; font-size:19px ;display:inline-block">blabla</div>
+						<div class="col-md-6 col-xs-6 text-right">
+								<a href="#"><i style="font-size:24px" class="fa fa-facebook social" id="social-fb"></i></a>
+								<a href="#"><i style="font-size:24px" class="fa fa-instagram social" id="social-insta"></i></a>
+								<a href="#"><i style="font-size:24px" class="fa fa-envelope-square social" id="social-em"></i></a></p>
+						</div>
+					</div>
+				</footer>
+
+
+  <script type='text/javascript' src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+
+</body>
+
+</html>

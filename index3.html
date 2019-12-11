@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		<link rel="stylesheet" href="form/build/css/countrySelect.css">
+		<link rel="stylesheet" href="form/build/css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <section>				
+                <div id="container_demo" >
+				  <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+						<h1>Log in</h1> 
+                            <form  action="index4.html" autocomplete="on"> 
+                                    <input id="username" name="username" required="required" type="text" placeholder="Email or Username "/>
+                                </p>
+                                <p> 
+                                   <input id="password" name="password" required="required" type="password" placeholder="Password" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Keep me signed in</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Login" /> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Join us</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on"> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
+									<span class="m"></span>
+								</p>
+                                <p> 
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Email"/> 
+                                </p>
+                                <p> 
+                                    <input class="in la" id="txtPassword" onkeyup = "checkPass() ,CheckPasswordStrength(this.value)"  name="passwordsignup" required="required" type="password" placeholder="Password"/>
+									<span id="password_strength"></span>
+								</p>
+                                <p>
+                                    <input class="in lo" id="passwordsignup_confirm" onkeyup = "checkPass()" name="passwordsignup_confirm" required="required" type="password" placeholder="Confirm Password "/>
+									<span id="match_password"></span>
+								</p>
+                                <p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Address 1" />
+                                </p>
+                                <p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Address 2" />
+                                </p>
+                                <p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="City" />
+                                </p>
+                                <p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="State/Province/Regionv" />
+                                </p>
+                                <p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="ZIP" />
+                                </p>
+									<div class="form-item">
+										<input id="country_selector" type="text" style="padding-left:45px">
+										<label for="country_selector" style="display:none;"> Select a country here...</label>
+									</div>
+									<div class="form-item" style="display:none;">
+										<input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+										<label for="country_selector_code">...and the selected country code will be updated here</label>
+									</div>
+									<button type="submit" style="display:none;">Submit</button>
+								<p> 
+                                    <input class="in" id="usernamesignup" name="usernamesignup" required="required" type="number" placeholder="Phone Number" />
+                                </p>
+                                <p class="signinn buttonn" id="lq" > 
+									<input id ="b" type="submit" value="Sign up" /> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>			
+                    </div>
+                </div>  
+            </section>
+        </div>
+		<script type="text/javascript">
+    function CheckPasswordStrength(password) {
+        var password_strength = document.getElementById("password_strength");
+ 
+        //TextBox left blank.
+        if (password.length == 0) {
+            password_strength.innerHTML = "";
+            return;
+        }
+ 
+        //Regular Expressions.
+        var regex = new Array();
+        regex.push("[A-Z]"); //Uppercase Alphabet.
+        regex.push("[a-z]"); //Lowercase Alphabet.
+        regex.push("[0-9]"); //Digit.
+        regex.push("[$@$!%*#?&]"); //Special Character.
+ 
+        var passed = 0;
+ 
+        //Validate for each Regular Expression.
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+ 
+        //Validate for length of Password.
+        if (passed > 2 && password.length > 8) {
+            passed++;
+        }
+ 
+        //Display status.
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "Weak";
+                color = "red";
+                break;
+            case 2:
+                strength = "Good";
+                color = "darkorange";
+                break;
+            case 3:
+            case 4:
+                strength = "Strong";
+                color = "green";
+                break;
+            case 5:
+                strength = "Very Strong";
+                color = "darkgreen";
+                break;
+        }
+        password_strength.innerHTML = strength;
+        password_strength.style.color = color;
+    }
+function checkPass()
+{
+    var pass1 = document.getElementById('txtPassword');
+    var pass2 = document.getElementById('passwordsignup_confirm');
+	var match = document.getElementById("match_password");
+	
+	        if(pass1.value == pass2.value)
+        {
+			
+            match.innerHTML = ""
+        }
+        else
+        {
+            match.style.color = "red";
+            match.innerHTML = " These passwords don't match. Try again?"
+        }
+		}
+		
+</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="form/build/js/countrySelect.min.js"></script>
+		<script>
+			$("#country_selector").countrySelect({
+				//defaultCountry: "jp",
+				//onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+				preferredCountries: ['ca', 'gb', 'us']
+			});
+			$(document).ready(function(){
+				$("#b").attr("disabled", true);
+				$(".in").keyup(function(){
+				if($(".in").val().length != 0)
+					if($(".la").val() == $(".lo").val())
+					if($("#password_strength").text() == "Strong" )
+					$("#b").attr("disabled", false);
+					
+				else
+					$("#b").attr("disabled", true) ;
+					
+					});
+			});
+		</script>
+    </body>
+</html>
